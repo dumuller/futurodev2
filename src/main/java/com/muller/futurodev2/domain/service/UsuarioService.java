@@ -30,6 +30,10 @@ public class UsuarioService {
         System.out.println("Cliente e endereço salvo com sucesso!");
     }
 
+    public UsuarioDto buscarUsuario(String cpf) {
+        return usuarioRepository.getUsuario(cpf);
+    }
+
     private String statusDoClienteNoSerasa(String cpf) {
         // requisição para a API do Serasa;
         return "BOM";

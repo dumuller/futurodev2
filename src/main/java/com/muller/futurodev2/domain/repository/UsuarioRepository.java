@@ -9,7 +9,7 @@ public class UsuarioRepository {
 
     public void salvarCliente(ClienteModel clienteModel) {
         var insertTable = "insert into cliente (nome, cpf) values ()";
-        System.out.println("Cliente inserido com sucesso!");
+        System.out.println("Cliente inserido com sucesso!" + clienteModel.toString());
     }
 
     public void salvarEndereco(EnderecoModel enderecoModel) {

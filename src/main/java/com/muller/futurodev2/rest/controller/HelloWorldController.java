@@ -31,9 +31,9 @@ public class HelloWorldController {
         return "Usuário salvo com sucesso!";
     }
 
-    @GetMapping("/usuario/{cpf}")
-    public ResponseEntity<UsuarioDto> buscarUsuario(@PathParam("cpf") String cpf) {
-        UsuarioDto usuarioDtoLocalizadoPeloCpf = usuarioService.buscarUsuario(cpf);
-        return new ResponseEntity<UsuarioDto>(usuarioDtoLocalizadoPeloCpf, HttpStatus.OK);
+    @GetMapping("/usuario")
+    public UsuarioDto buscarUsuario() {
+        UsuarioDto usuarioDtoLocalizadoPeloCpf = usuarioService.buscarUsuario("cpf");
+        return usuarioDtoLocalizadoPeloCpf;
     }
 }
